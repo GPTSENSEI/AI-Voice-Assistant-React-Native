@@ -8,6 +8,7 @@ import {
   Platform,
 } from 'react-native';
 import {Button, Input, Image} from '@rneui/base';
+import {StatusBar} from 'expo-status-bar';
 import React, {useState, useEffect} from 'react';
 import {
   widthPercentageToDP as wp,
@@ -66,6 +67,7 @@ const LoginScreen = ({navigation}) => {
       style={styles.container}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.container}>
+          <StatusBar style="light" />
           <Image
             source={require('../../assets/images/gptlogo_noBackgroud.png')}
             style={styles.logo}
